@@ -1,0 +1,86 @@
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: 56, 41, 224;
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--Pale-blue);
+}
+.container__card {
+  width: min(calc(375px - 2rem));
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px 30px rgba(var(--Bright-blue), 0.05);
+}
+.container__card > img {
+  width: 100%;
+}
+.card__features {
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+.features__title {
+  margin-bottom: 1rem;
+}
+.features__paragraph {
+  margin-bottom: 1.5rem;
+  color: var(--Desaturated-blue);
+}
+.features__options {
+  display: flex;
+  background-color: var(--Very-pale-blue);
+  gap: 0.5rem;
+  padding: 1rem;
+  border-radius: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.options__description {
+  flex: 1;
+  font-size: 14px;
+}
+.options__description > span:nth-child(1) {
+  font-weight: 700;
+}
+.options__description > span:nth-child(2) {
+  color: var(--Desaturated-blue);
+}
+.features__buttons > button {
+  display: block;
+  width: 100%;
+  padding: 1rem 2rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.btn-primary {
+  margin-bottom: 1rem;
+  background: rgb(var(--Bright-blue));
+  color: #fff;
+  box-shadow: 0 5px 20px 20px rgba(var(--Bright-blue), 0.1);
+  z-index: 9;
+}
+.btn-outline {
+  z-index: 0;
+  background: transparent;
+  color: var(--Desaturated-blue);
+}
